@@ -15,7 +15,7 @@ https://nodejs.org/
 
 
 # Get source code:
-git clone 
+git clone https://github.com/mrhadi/toy-robot-simulator.git
 
 # Get dependencies
 npm install
