@@ -4,6 +4,7 @@ const { friendlyFace } = require('./utils/tools');
 
 let posRobot = ZERO_POS;
 
+// Check if this is a valid move
 const canPlace = pos => (pos.x >= 0 && pos.x < TABLE_WIDTH && pos.y >= 0 && pos.y < TABLE_HEIGHT);
 
 const place = (x, y, face) => {

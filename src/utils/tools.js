@@ -1,5 +1,6 @@
 const { FACE_NORTH, FACE_WEST, FACE_SOUTH, FACE_EAST } = require('./constants');
 
+// Convert the face value to user friendly string
 const friendlyFace = (face) => {
   if (face.x === FACE_NORTH.x && face.y === FACE_NORTH.y)
     return 'NORTH';
