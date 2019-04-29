@@ -8,4 +8,6 @@ place(4, 4, FACE_NORTH);
 report();
 left();
 report();
+right();
+report();
 
