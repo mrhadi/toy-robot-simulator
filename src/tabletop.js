@@ -1,5 +1,5 @@
 const { TABLE_WIDTH, TABLE_HEIGHT, ZERO_POS } = require('./utils/constants');
-const { setFace, getFace, stringFace } = require('./robot');
+const { setFace, getFace } = require('./robot');
 const { friendlyFace } = require('./utils/tools');
 
 let posRobot = ZERO_POS;
