@@ -1,5 +1,4 @@
 const { TABLE_WIDTH, TABLE_HEIGHT, ZERO_POS } = require('./utils/constants');
-const { FACE_NORTH, FACE_WEST, FACE_SOUTH, FACE_EAST } = require('./utils/constants');
 const { setFace, getFace, stringFace } = require('./robot');
 
 let posRobot = ZERO_POS;
@@ -16,12 +15,26 @@ const place = (x, y, face) => {
   setFace(face);
 };
 
-const report = () => console.log(`${posRobot.x},${posRobot.y} : ${stringFace(getFace())}`);
+const move = () => {
+  const face = getFace();
+  const newPos = { x: posRobot.x + face.x, y: posRobot.y + face.y};
 
-const getPosRobot = () => posRobot;
+  if (canPlace(newPos)) {
+    posRobot = newPos;
+
+    console.log(`Moved`);
+  }
+  else {
+    console.log(`Can't move to this position`);
+  }
+};
+
+const report = () => {
+  console.log(`${posRobot.x},${posRobot.y} : ${stringFace(getFace())}`);
+};
 
 module.exports = {
   place,
   report,
-  getPosRobot
+  move
 };

@@ -3,14 +3,19 @@ const { rotateLeft, rotateRight } = require('./utils/rotate');
 
 let myFace = FACE_NORTH;
 
-const move = () => {
+const left = () => {
+  myFace = rotateLeft(myFace);
+  console.log(`Left`);
 };
 
-const left = () => myFace = rotateLeft(myFace);
+const right = () => {
+  myFace = rotateRight(myFace);
+  console.log(`Right`);
+};
 
-const right = () => myFace = rotateRight(myFace);
-
-const setFace = (face) => myFace = face;
+const setFace = (face) => {
+  myFace = face;
+};
 
 const getFace = () => myFace;
 
@@ -26,7 +31,6 @@ const stringFace = (face) => {
 };
 
 module.exports = {
-  move,
   left,
   right,
   setFace,
