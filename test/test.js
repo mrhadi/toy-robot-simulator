@@ -11,16 +11,43 @@ describe('Toy Robot Simulator', function() {
     });
   });
 
-  describe('Place at 4,4 facing north', function() {
+  describe('Place at 4,4 facing North', function() {
     it('Should return 4,4,NORTH', function() {
       place(4, 4, FACE_NORTH);
       assert.equal(report(), '4,4,NORTH');
     });
   });
 
-  describe('Place at 4,5 facing east', function() {
+  describe('Place at 4,5 facing East', function() {
     it('Should return false', function() {
       assert.equal(place(4, 5, FACE_EAST), false);
+    });
+  });
+
+  describe('Turn right', function() {
+    it('Should return 4,4,EAST', function() {
+      right();
+      assert.equal(report(), '4,4,EAST');
+    });
+  });
+
+  describe('Move', function() {
+    it('Should return false, out of boundaries', function() {
+      assert.equal(move(), false);
+    });
+  });
+
+  describe('Turn right', function() {
+    it('Should return 4,4,SOUTH', function() {
+      right();
+      assert.equal(report(), '4,4,SOUTH');
+    });
+  });
+
+  describe('Move', function() {
+    it('Should return 4,3,SOUTH', function() {
+      move();
+      assert.equal(report(), '4,3,SOUTH');
     });
   });
 });

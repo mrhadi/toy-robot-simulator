@@ -5,12 +5,10 @@ let myFace = FACE_NORTH;
 
 const left = () => {
   myFace = rotateLeft(myFace);
-  console.log(`Left`);
 };
 
 const right = () => {
   myFace = rotateRight(myFace);
-  console.log(`Right`);
 };
 
 const setFace = (face) => {

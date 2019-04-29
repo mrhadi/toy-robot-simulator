@@ -22,21 +22,15 @@ const move = () => {
 
   if (canPlace(newPos)) {
     posRobot = newPos;
-
-    console.log(`Move`);
   }
   else {
-    console.log(`Can't move to this position`);
+    console.log(`Can't move to this position, out of boundaries`);
+
+    return false;
   }
 };
 
-const report = () => {
-  const repString = `${posRobot.x},${posRobot.y},${friendlyFace(getFace())}`;
-
-  console.log(repString);
-
-  return repString;
-};
+const report = () => `${posRobot.x},${posRobot.y},${friendlyFace(getFace())}`;
 
 module.exports = {
   place,
