@@ -1,5 +1,6 @@
 const { TABLE_WIDTH, TABLE_HEIGHT, ZERO_POS } = require('./utils/constants');
 const { setFace, getFace, stringFace } = require('./robot');
+const { friendlyFace } = require('./utils/tools');
 
 let posRobot = ZERO_POS;
 
@@ -22,7 +23,7 @@ const move = () => {
   if (canPlace(newPos)) {
     posRobot = newPos;
 
-    console.log(`Moved`);
+    console.log(`Move`);
   }
   else {
     console.log(`Can't move to this position`);
@@ -30,7 +31,7 @@ const move = () => {
 };
 
 const report = () => {
-  console.log(`${posRobot.x},${posRobot.y} : ${stringFace(getFace())}`);
+  console.log(`${posRobot.x},${posRobot.y},${friendlyFace(getFace())}`);
 };
 
 module.exports = {

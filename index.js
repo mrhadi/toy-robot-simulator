@@ -4,6 +4,7 @@ const { FACE_NORTH, FACE_WEST, FACE_SOUTH, FACE_EAST } = require('./src/utils/co
 
 place(4, 4, FACE_NORTH);
 report();
-left();
+right();
+right()
 move();
 report();
