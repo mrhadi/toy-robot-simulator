@@ -9,7 +9,7 @@ const canPlace = pos => (pos.x >= 0 && pos.x < TABLE_WIDTH && pos.y >= 0 && pos.
 const place = (x, y, face) => {
   if (!canPlace({ x: x, y: y})) {
     console.log(`Can't place the robot at this position!`);
-    return;
+    return false;
   }
 
   posRobot = { x: x, y: y};
@@ -31,7 +31,11 @@ const move = () => {
 };
 
 const report = () => {
-  console.log(`${posRobot.x},${posRobot.y},${friendlyFace(getFace())}`);
+  const repString = `${posRobot.x},${posRobot.y},${friendlyFace(getFace())}`;
+
+  console.log(repString);
+
+  return repString;
 };
 
 module.exports = {

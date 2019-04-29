@@ -5,8 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
+  },
+  "directories": {
+    "test": "test"
   },
   "author": "Hadi Shad",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
 }
